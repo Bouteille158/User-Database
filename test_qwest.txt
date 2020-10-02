@@ -1,0 +1,31 @@
+Bonjour,
+
+Le test de recrutement se base sur deux phases.
+
+1ère phase
+Une petite ApiRest CRUD :
+  • avec une Table ou Collection "Person", 
+  • avec les Colonnes/Documents "firstname, lastname, address, isActive"
+  • avec les classiques méthodes HTTP "GET" (un seul et tous les Person), "POST", "PUT", "DELETE"
+Connexion à une base de donnée, pas obligatoire. Si vous le faites, merci de me joindre un dump de votre BDD.
+
+2ème phase
+Une petite partie frontal avec le framework JS, Angular2+ ou ReactJS (de préférence avec des Hooks)
+
+Une page simple qui montre les "Person" où l'on peut ajouter, supprimer, modifier une personne.
+Si vous avez le temps et que vous sentez capable de filtrer le/les résultats.
+
+Je considère que l'épreuve est soigné si :
+  • le code est au minimum indenter, 
+  • lisible,
+  • qu'un fichier README permet d'au moins installer et lancer les différents services.
+
+Vous pouvez faire un ou deux repos GitHub ou Gitlab. Je ne vous demande pas de faire de l'intégration continue.
+
+Le but, c'est que les deux services puissent interagir entre eux en local ou distant.
+
+Mis à part les indications susmentionné, vous avez une totale liberté en termes de designs, de langages et de librairies. Ce test est juste pour voir où vous en êtes, si vous n'y arrivez pas ou que cela peut vous semblez difficile, ce n'est pas grave, vous ne jouez pas votre vie.
+
+Je vous donne, jusqu’au 11 Octobre 2020, pour réaliser ce test. Je prendrai, une décision le plus rapidement possible, la semaine suivante.
+
+Bonne chance à vous,
