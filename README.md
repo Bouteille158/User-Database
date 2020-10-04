@@ -5,7 +5,7 @@ L'application est divisée en 3 parties :
 - l'API qui permet de faire les requêtes HTTP à la base de données
 - l'interface ReactJS
 
-# Bug connus
+# Bugs connus
 
 L'extension Google traduction empêche l'affichage des utilisateurs sélectionnés
 
