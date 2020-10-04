@@ -80,7 +80,7 @@ const User = props => {
             <h4>User</h4>
             <form>
                 <div className="form-group">
-                <label htmlFor="first_name">first_name</label>
+                <label htmlFor="first_name">First name</label>
                 <input
                     type="text"
                     className="form-control"
@@ -91,7 +91,7 @@ const User = props => {
                 />
                 </div>
                 <div className="form-group">
-                <label htmlFor="last_name">last_name</label>
+                <label htmlFor="last_name">Last name</label>
                 <input
                     type="text"
                     className="form-control"
@@ -102,7 +102,7 @@ const User = props => {
                 />
                 </div>
                 <div className="form-group">
-                <label htmlFor="address">address</label>
+                <label htmlFor="address">Address</label>
                 <input
                     type="text"
                     className="form-control"
@@ -115,7 +115,7 @@ const User = props => {
 
                 <div className="form-group">
                 <label>
-                    <strong>Status:</strong>
+                    <strong>Status : </strong>
                 </label>
                 {currentUser.isActive ? "isActive" : "isInactive"}
                 </div>
