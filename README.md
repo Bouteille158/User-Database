@@ -45,7 +45,10 @@ Par défaut, l'application React se lance sur le port 8001 et lance le navigateu
 
             8000
 
+
     /!\ Il faut dans ce cas également modifier le port d'envoi de React à l'API /!\
+
+
 
 2. React (react-hooks-crud)
 
