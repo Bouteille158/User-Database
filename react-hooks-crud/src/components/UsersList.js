@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from "react";
-import TutorialDataService from "../services/TutorialService";
+import UserDataService from "../services/UserService";
 import { Link } from "react-router-dom";
 
-const TutorialsList = () => {
-const [tutorials, setTutorials] = useState([]);
-const [currentTutorial, setCurrentTutorial] = useState(null);
+const UsersList = () => {
+const [users, setUsers] = useState([]);
+const [currentUser, setcurrentUser] = useState(null);
 const [currentIndex, setCurrentIndex] = useState(-1);
-const [searchTitle, setSearchTitle] = useState("");
+const [searchfirst_name, setSearchfirst_name] = useState("");
 
     useEffect(() => {
-        retrieveTutorials();
+        retrieveUsers();
     }, []);
 
-    const onChangeSearchTitle = e => {
-        const searchTitle = e.target.value;
-        setSearchTitle(searchTitle);
+    const onChangeSearchfirst_name = e => {
+        const searchfirst_name = e.target.value;
+        setSearchfirst_name(searchfirst_name);
     };
 
-    const retrieveTutorials = () => {
-        TutorialDataService.getAll()
+    const retrieveUsers = () => {
+        UserDataService.getAll()
         .then(response => {
-            setTutorials(response.data);
+            setUsers(response.data);
             console.log(response.data);
         })
         .catch(e => {
@@ -29,18 +29,18 @@ const [searchTitle, setSearchTitle] = useState("");
     };
 
     const refreshList = () => {
-        retrieveTutorials();
-        setCurrentTutorial(null);
+        retrieveUsers();
+        setcurrentUser(null);
         setCurrentIndex(-1);
     };
 
-    const setActiveTutorial = (tutorial, index) => {
-        setCurrentTutorial(tutorial);
+    const setActiveUser = (user, index) => {
+        setcurrentUser(user);
         setCurrentIndex(index);
     };
 
-    const removeAllTutorials = () => {
-        TutorialDataService.removeAll()
+    const removeAllUsers = () => {
+        UserDataService.removeAll()
         .then(response => {
             console.log(response.data);
             refreshList();
@@ -50,10 +50,10 @@ const [searchTitle, setSearchTitle] = useState("");
         });
     };
 
-    const findByTitle = () => {
-        TutorialDataService.findByTitle(searchTitle)
+    const findByfirst_name = () => {
+        UserDataService.findByfirst_name(searchfirst_name)
         .then(response => {
-            setTutorials(response.data);
+            setUsers(response.data);
             console.log(response.data);
         })
         .catch(e => {
@@ -68,15 +68,15 @@ const [searchTitle, setSearchTitle] = useState("");
             <input
                 type="text"
                 className="form-control"
-                placeholder="Search by title"
-                value={searchTitle}
-                onChange={onChangeSearchTitle}
+                placeholder="Search by first name"
+                value={searchfirst_name}
+                onChange={onChangeSearchfirst_name}
             />
             <div className="input-group-append">
                 <button
                 className="btn btn-outline-secondary"
                 type="button"
-                onClick={findByTitle}
+                onClick={findByfirst_name}
                 >
                 Search
                 </button>
@@ -84,55 +84,61 @@ const [searchTitle, setSearchTitle] = useState("");
             </div>
         </div>
         <div className="col-md-6">
-            <h4>Tutorials List</h4>
+            <h4>Users List</h4>
 
             <ul className="list-group">
-            {tutorials &&
-                tutorials.map((tutorial, index) => (
+            {users &&
+                users.map((user, index) => (
                 <li
                     className={
                     "list-group-item " + (index === currentIndex ? "active" : "")
                     }
-                    onClick={() => setActiveTutorial(tutorial, index)}
+                    onClick={() => setActiveUser(user, index)}
                     key={index}
                 >
-                    {tutorial.title}
+                    {user.first_name}
                 </li>
                 ))}
             </ul>
 
             <button
             className="m-3 btn btn-sm btn-danger"
-            onClick={removeAllTutorials}
+            onClick={removeAllUsers}
             >
             Remove All
             </button>
         </div>
         <div className="col-md-6">
-            {currentTutorial ? (
+            {currentUser ? (
             <div>
-                <h4>Tutorial</h4>
+                <h4>User</h4>
                 <div>
                 <label>
-                    <strong>Title:</strong>
+                    <strong>First name :</strong>
                 </label>{" "}
-                {currentTutorial.title}
+                {currentUser.first_name}
                 </div>
                 <div>
                 <label>
-                    <strong>Description:</strong>
+                    <strong>Last name :</strong>
                 </label>{" "}
-                {currentTutorial.description}
+                {currentUser.last_name}
                 </div>
                 <div>
                 <label>
-                    <strong>Status:</strong>
+                    <strong>Address :</strong>
                 </label>{" "}
-                {currentTutorial.published ? "Published" : "Pending"}
+                {currentUser.address}
+                </div>
+                <div>
+                <label>
+                    <strong>Status :</strong>
+                </label>{" "}
+                {currentUser.isActive ? "isActive" : "isInactive"}
                 </div>
 
                 <Link
-                to={"/tutorials/" + currentTutorial.id}
+                to={"/users/" + currentUser.id}
                 className="badge badge-warning"
                 >
                 Edit
@@ -141,7 +147,7 @@ const [searchTitle, setSearchTitle] = useState("");
             ) : (
             <div>
                 <br />
-                <p>Please click on a Tutorial...</p>
+                <p>Please click on a User...</p>
             </div>
             )}
         </div>
@@ -149,4 +155,4 @@ const [searchTitle, setSearchTitle] = useState("");
     );
 };
 
-export default TutorialsList;
+export default UsersList;
