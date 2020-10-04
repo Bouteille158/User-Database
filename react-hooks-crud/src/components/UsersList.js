@@ -105,7 +105,7 @@ const [searchfirst_name, setSearchfirst_name] = useState("");
             className="m-3 btn btn-sm btn-danger"
             onClick={removeAllUsers}
             >
-            Remove All
+            Remove all
             </button>
         </div>
         <div className="col-md-6">
@@ -147,7 +147,7 @@ const [searchfirst_name, setSearchfirst_name] = useState("");
             ) : (
             <div>
                 <br />
-                <p>Please click on a User...</p>
+                <p>Please click on a user...</p>
             </div>
             )}
         </div>
