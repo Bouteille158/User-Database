@@ -7,7 +7,8 @@ L'application est divisée en 3 parties :
 
 # Bugs connus
 
-L'extension Google traduction empêche l'affichage des utilisateurs sélectionnés
+- L'extension Google traduction empêche l'affichage des utilisateurs sélectionnés
+- Si les deux services sont lancés sur deux machines séparés, le pare feu Windows bloque par défaut les communications. Le désactiver règle le problème.
 
 # Prérequis
 
