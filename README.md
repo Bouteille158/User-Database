@@ -2,7 +2,7 @@
 
 L'application est divisée en 3 parties :
 - la base de données qui est hébergée sur le cloud mongoDB mais qui peut être aussi installée localement
-- l'API qui permet de faire les requetes HTTP à la base de données
+- l'API qui permet de faire les requêtes HTTP à la base de données
 - l'interface ReactJS
 
 # Prérequis
