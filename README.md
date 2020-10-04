@@ -47,7 +47,8 @@ Par défaut, l'application React se lance sur le port 8001 et lance le navigateu
 
     Pour modifier la connexion de React à l'API, il faut modifier l'URL dans src\http-common.js 
 
-    Par défaut : 
+    Par défaut :
+    
             http://192.168.1.19:8000/api
 
     Pour modifier le port utilisé entre le navigateur et React, il faut modifier le port dans .env 
