@@ -33,8 +33,8 @@ Par défaut, l'application React se lance sur le port 8001 et lance le navigateu
 
     Pour modifier la base de données à laquelle se connecte l'API, il faut modifier l'URL dans app\config\db.config.js 
 
-        Par défaut : 
-            mongodb+srv://bouteille:LJk8rHH2pZ46HN15@qwesttv-test.yznnj.mongodb.net/QwestTV-test?retryWrites=true&w=majority
+    Par défaut : 
+        mongodb+srv://bouteille:LJk8rHH2pZ46HN15@qwesttv-test.yznnj.mongodb.net/QwestTV-test?retryWrites=true&w=majority
 
     Pour modifier le port d'écoute de l'API, il faut modifier le port dans server.js à la ligne 41 
 
