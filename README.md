@@ -23,6 +23,9 @@ Par défaut, l'API se connecte sur la BDD cloud sur le port 8000
 4. Executer les commandes suivantes :
     - npm install
     - npm start
+
+&nbsp;
+
 Par défaut, l'application React se lance sur le port 8081 et lance le navigateur par défaut pour afficher l'interface.
 
 
