@@ -1,4 +1,4 @@
-# QwestTV-Test
+# User Database
 
 L'application est divisée en 3 parties :
 - la base de données qui est hébergée sur le cloud mongoDB mais qui peut être aussi installée localement
